@@ -415,17 +415,17 @@ export default function ManLookingLightIcon({ ...props }: ComponentProps<"svg">)
             <path
                 d="M98.4999 94.3879C97.5995 95.1074 96.5641 95.6402 95.4546 95.9549"
                 stroke="#F7A48B"
-                stroke-miterlimit="10"
+                strokeMiterlimit="10"
             />
             <path
                 d="M100.463 94.8262C99.479 96.0307 98.2825 97.0454 96.9326 97.8201"
                 stroke="#F7A48B"
-                stroke-miterlimit="10"
+                strokeMiterlimit="10"
             />
             <path
                 d="M98.9849 98.4418C98.9849 98.4418 100.795 97.3996 101.443 95.4173"
                 stroke="#F7A48B"
-                stroke-miterlimit="10"
+                strokeMiterlimit="10"
             />
             <defs>
                 <linearGradient
@@ -436,7 +436,7 @@ export default function ManLookingLightIcon({ ...props }: ComponentProps<"svg">)
                     y2="88.6492"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="white" />
+                    <stop stopColor="white" />
                     <stop offset="1" />
                 </linearGradient>
                 <linearGradient
@@ -447,7 +447,7 @@ export default function ManLookingLightIcon({ ...props }: ComponentProps<"svg">)
                     y2="125.234"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="white" />
+                    <stop stopColor="white" />
                     <stop offset="1" />
                 </linearGradient>
             </defs>

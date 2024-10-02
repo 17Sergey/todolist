@@ -51,7 +51,7 @@ const FiltersDropdown = () => {
             </div>
 
             {isOpen && (
-                <div className="absolute w-full rounded-md shadow-lg bg-primary-content border-primary border">
+                <div className="absolute z-10 w-full rounded-md shadow-lg bg-primary-content border-primary border">
                     <ul>
                         {options.map((option) => (
                             <li

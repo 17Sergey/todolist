@@ -29,7 +29,7 @@ export default function Todo({ todo }: { todo: TodoType }) {
     };
 
     return (
-        <div className="flex items-center gap-4 py-4 border-b-[1px] last:border-b-0 border-b-primary">
+        <div className="flex items-start gap-4 py-4 border-b-[1px] last:border-b-0 border-b-primary">
             <form className="form-control">
                 <label className="label cursor-pointer">
                     <input
@@ -40,7 +40,7 @@ export default function Todo({ todo }: { todo: TodoType }) {
                     />
                 </label>
             </form>
-            <div className="flex justify-between gap-4 w-full">
+            <div className="relative top-[5px] flex justify-between items-start gap-4 w-full">
                 <p
                     className={`font-medium font-sans uppercase text-xl cursor-pointer ${
                         isCompleted && "line-through text-[--theme-accent] opacity-50"

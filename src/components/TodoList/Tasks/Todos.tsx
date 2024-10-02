@@ -34,7 +34,7 @@ export default function Todos() {
                 </div>
             )}
             {displayedTodos?.length > 0 && (
-                <div>
+                <div className="pb-12 md:pb-0">
                     {displayedTodos?.map((todo: TodoType) => (
                         <Todo
                             key={todo.id}
