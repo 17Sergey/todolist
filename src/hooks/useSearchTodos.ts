@@ -17,6 +17,10 @@ const filterTodos = ({
     return todos;
 };
 
+const escapeRegExp = (string: string) => {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+};
+
 export const useSearchTodos = () => {
     const { state } = useContext(TodoContext);
     const { todos, searchValue, filterCritery } = state;
@@ -26,9 +30,11 @@ export const useSearchTodos = () => {
     useEffect(() => {
         if (searchValue === "") setDisplayedTodos(todos);
 
-        const regex = new RegExp(searchValue, "i");
-
+        // Escape errors for special symbols like +, -, *, {, }.
+        const escapedSearchValue = escapeRegExp(searchValue);
+        const regex = new RegExp(escapedSearchValue, "i");
         const foundTodos = todos.filter((todo) => regex.test(todo.text));
+
         const filteredTodos = filterTodos({ todos: foundTodos, filterCritery });
         setDisplayedTodos(filteredTodos);
     }, [todos, searchValue, filterCritery]);
